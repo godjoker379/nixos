@@ -53,7 +53,7 @@
         sudo nixos-rebuild switch --flake ~/nixos#synthesis
       end
       function hm
-        home-manager switch --flake ~/nixos#prabhas@synthesis
+        home-manager switch --flake ~/nixos#naminesh@synthesis
       end
       function flakeupdate
         nix flake update ~/nixos
