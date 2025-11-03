@@ -93,9 +93,9 @@
   ];
 
   users.users = {
-    prabhas = {
+    naminesh = {
       isNormalUser = true;
-      description = "Prabhas";
+      description = "Naminesh";
       extraGroups = ["wheel" "networkmanager" "docker"];
       initialPassword = "temp123";
     };
