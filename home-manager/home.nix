@@ -50,8 +50,8 @@
   };
 
   home = {
-    username = "prabhas";
-    homeDirectory = "/home/prabhas";
+    username = "naminesh";
+    homeDirectory = "/home/naminesh";
   };
 
   home.packages = with pkgs; [
