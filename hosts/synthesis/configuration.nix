@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    outputs.nixosModules.impermanence
+    # outputs.nixosModules.impermanence
     outputs.nixosModules.sddm
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
