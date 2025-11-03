@@ -30,7 +30,7 @@
 
 
       alias ns="sudo nixos-rebuild switch --flake ~/nixos#synthesis"
-      alias hm="home-manager switch --flake ~/nixos#prabhas@synthesis"
+      alias hm="home-manager switch --flake ~/nixos#naminesh@synthesis"
       alias flakeupdate="nix flake update ~/nixos"
 
       alias cls="clear"
