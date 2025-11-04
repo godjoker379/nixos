@@ -242,6 +242,17 @@
     LC_TIME = "en_IN";
   };
 
+  services.udisks2.enable = true; 
+
+
+
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+
+
+services.tumbler.enable = true; # Thumbnail support for images
+
+
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.05";
 }
