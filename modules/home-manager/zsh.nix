@@ -40,7 +40,8 @@
       alias lla="eza --long --all --color=always --icons=always --no-user"
 
 
-      alias emptytrash="rm -rf ~/.local/share/Trash/files/* && rm -rf ~/.local/share/Trash/info/*"
+      alias emptytrash="trash empty --all"
+      alias trashl="trash list"
 
 
       # Better TAB completion (already solid)

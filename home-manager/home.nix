@@ -5,14 +5,16 @@
   config,
   pkgs,
   ...
-}: {
+}: let 
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+  in {
   # You can import other home-manager modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
     outputs.homeManagerModules.config_symlinks
     outputs.homeManagerModules.zsh
-    outputs.homeManagerModules.fish
+    # outputs.homeManagerModules.fish
     outputs.homeManagerModules.kitty
     outputs.homeManagerModules.stylix
     # Or modules exported from other flakes (such as nix-colors):
@@ -63,17 +65,24 @@
     slurp
     bibata-cursors
     nerd-fonts.jetbrains-mono
-    winboat
     btrfs-progs
     kdePackages.kate
     fastfetch
-    microfetch
     nitch
-    nerdfetch
     hyprmon
     xfce.thunar
     kdePackages.dolphin
     qbittorrent-enhanced
+    ngrok
+    python313
+    python313Packages.pip
+    vesktop
+    vlc
+    trashy
+    pipes
+    tenki
+    mpvpaper
+    google-chrome
   ];
 
   home.pointerCursor = {
@@ -105,6 +114,17 @@
   programs.home-manager.enable = true;
 
   programs.dankMaterialShell.enable = true;
+
+  programs.spicetify = {
+     enable = true;
+     enabledExtensions = with spicePkgs.extensions; [
+       adblockify
+       hidePodcasts
+       shuffle 
+     ];
+     theme = spicePkgs.themes.catppuccin;
+     colorScheme = "mocha";
+   };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

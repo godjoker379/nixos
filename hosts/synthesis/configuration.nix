@@ -96,7 +96,7 @@
     naminesh = {
       isNormalUser = true;
       description = "Naminesh";
-      extraGroups = ["wheel" "networkmanager" "docker"];
+      extraGroups = ["wheel" "networkmanager" "render" "video"];
       initialPassword = "temp123";
     };
   };
@@ -118,11 +118,11 @@
     };
   };
 
-  virtualisation.docker = {
-    enable = true;
-    extraPackages = [pkgs.docker-buildx];
-  };
-  virtualisation.docker.storageDriver = "btrfs";
+  # virtualisation.docker = {
+  #   enable = true;
+  #   extraPackages = [pkgs.docker-buildx];
+  # };
+  # virtualisation.docker.storageDriver = "btrfs";
 
   boot = {
     kernelParams = [
@@ -149,7 +149,7 @@
     }
   ];
 
-  boot.resumeDevice = "/dev/disk/by-uuid/301e26ea-dacc-4fbc-814f-653ec5be11b8";
+  boot.resumeDevice = "/dev/disk/by-uuid/ec3dc4db-33a1-45bd-b820-3558968b56a0";
   # ^^^ UUID of /dev/nvme0n1p2 (btrfs-root/root) from 'lsblk -f'
   powerManagement.enable = true;
 

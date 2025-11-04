@@ -32,6 +32,10 @@
       url = "github:AvengeMedia/danklinux";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    #spicetify
+
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -104,6 +108,7 @@
           ./home-manager/home.nix
 
           inputs.stylix.homeModules.stylix
+          inputs.spicetify-nix.homeManagerModules.spicetify
         ];
       };
     };
